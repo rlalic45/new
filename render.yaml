@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: vatrogasni-dispecer-backend
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    repo: https://github.com/korisnik/vatrogasni-dispecer
+    branch: main
+    autoDeploy: true
+    rootDir: backend
